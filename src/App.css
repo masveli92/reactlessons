@@ -1,1 +1,46 @@
-
+.App{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 20px;
+    background: darkgray;
+}
+.header{
+    width: 100%;
+    text-align: center;
+    font-size: 30px
+}
+.simpsonCard{
+    margin-top: 10px;
+    width: 18%;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: whitesmoke;
+}
+.simpsonPic{
+    width: 150px;
+}
+.simpsonName{
+    width: 100%;
+    text-align: center;
+}
+.rmCard{
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: whitesmoke;
+}
+.rmCardTitle{
+    width: 100%;
+    text-align: center;
+    font-size: 13pt;
+}
+.rmCardPic{
+    width: 100%;
+}
