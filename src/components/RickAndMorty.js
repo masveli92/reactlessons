@@ -8,6 +8,6 @@ export default function RickAndMorty(props) {
                 <li className='rmCardList'>{character.species}</li>
                 <li className='rmCardList'>{character.gender}</li>
             </ul>
-            <img src={character.image}className='rmCardPic'/>
+            <img src={character.image} alt={"character"} className='rmCardPic'/>
         </div>)
 }
