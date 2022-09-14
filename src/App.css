@@ -6,13 +6,20 @@
     row-gap: 20px;
     background: darkgray;
 }
+.simpsonsBlock{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+}
 .header{
     width: 100%;
     text-align: center;
     font-size: 30px
 }
 .simpsonCard{
-    margin-top: 10px;
     width: 18%;
     height: 350px;
     border: 1px solid black;
