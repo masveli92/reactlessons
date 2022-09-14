@@ -36,7 +36,7 @@ function App() {
             {/*Створити 6 персонажів*/}
 
             <h2 className='header'> Rick and Morty </h2>
-            {rickAndMorty.map(character=> (<RickAndMorty value = {character}/>))}
+            {rickAndMorty.map(character=> (<RickAndMorty value = {character} key={character.id}/>))}
         </div>
     );
 }
