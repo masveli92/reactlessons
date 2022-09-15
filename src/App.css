@@ -1,18 +1,14 @@
 .App{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    row-gap: 20px;
     background: darkgray;
 }
-.simpsonsBlock{
+.simpsonsBlock, .rmBlock{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
-
+    row-gap: 20px;
 }
 .header{
     width: 100%;
@@ -38,7 +34,7 @@
     text-align: center;
 }
 .rmCard{
-    width: 30%;
+    width: 28%;
     border: 1px solid black;
     border-radius: 5px;
     background: whitesmoke;

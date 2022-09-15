@@ -1,7 +1,6 @@
 import './App.css';
-import {rickAndMorty} from "./data";
-import RickAndMorty from "./components/RickAndMorty";
 import SimpsCard from "./components/SimpsCard";
+import RMCard from "./components/RMCard";
 
 function App() {
     return (
@@ -16,7 +15,7 @@ function App() {
             {/*Створити 6 персонажів*/}
 
             <h2 className='header'> Rick and Morty </h2>
-                {rickAndMorty.map(character=> (<RickAndMorty value = {character} key = {character.id}/>))}
+                <RMCard/>
 
         </div>
     );
