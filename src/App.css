@@ -1,49 +1,27 @@
-.usersHeader{
-    text-align: center;
-}
-.usersBox {
-    margin-top: 20px;
+.launches{
     display: flex;
-    flex-direction: row;
-    height: 100%;
+    flex-wrap: wrap;
+    background: space;
+    row-gap: 25px;
+    justify-content: space-evenly;
+    background: #00001E;
 }
-.usersList{
-width: 40%;
-    margin-left: 15px;
-}
-.userField{
-    margin: 10px;
+.launch{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 20%;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    border: 1px solid white;
+    background: #3E5774;
 }
-.userField:hover{
-    background: silver;
+.launch:hover{
+    background: whitesmoke;
 }
-
-.infoButton{
-    margin-right: 20px;
-    margin-left: 10px;
-    width: 60px;
-    height: 20px;
+.picture{
+    height: 150px;
+    width: 150px;
 }
-.userBox{
-    width: 60%;
-    background: silver;
-}
-.userHeader{
-    margin: 0;
-
-    text-align: start;
-}
-.userInfoHeader{
-    margin-top: 0;
+.launchName{
     text-align: center;
-}
-.userList{
-    list-style: none;
-}
-.userData{
-    margin: 3px;
 }
