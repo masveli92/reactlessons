@@ -1,1 +1,49 @@
+.usersHeader{
+    text-align: center;
+}
+.usersBox {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.usersList{
+width: 40%;
+    margin-left: 15px;
+}
+.userField{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.userField:hover{
+    background: silver;
+}
 
+.infoButton{
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 60px;
+    height: 20px;
+}
+.userBox{
+    width: 60%;
+    background: silver;
+}
+.userHeader{
+    margin: 0;
+
+    text-align: start;
+}
+.userInfoHeader{
+    margin-top: 0;
+    text-align: center;
+}
+.userList{
+    list-style: none;
+}
+.userData{
+    margin: 3px;
+}
