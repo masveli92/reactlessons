@@ -1,14 +1,27 @@
 import './App.css';
-import Users from "./components/Users";
+import {useState} from "react";
+
+import {Users, Posts} from "./components";
+import {postService} from "./services";
+
 
 function App() {
+
+  let [posts,setPosts] = useState([]);
+
+const getPostById = (userId) => {
+  postService.getPosts(userId).then(({data})=> setPosts(data));
+}
+
   return (
     <div className="App">
-        {/*з jsonplaceholder отримати всіх юзерів в компоненту Users.js*/}
-        {/*відобразити кожного інформацію (id,name) з кожного юзера (компонента User)*/}
-        {/*Зробити кнопку вибора юзера, при натисканні на яку в Users.js ви покажете детальну інфомацію про
-        користувача(довільно обрану інформацію)*/}
-    <Users/>
+      {/*Отримати всіх користувачів з jsonplaceholder, вивести їх.*/}
+      {/*Біля кожного користувача зробити кнопку, при натисканні на яку в Апп компоненті
+      з'являються всі пости поточного користувача*/}
+      {/*Запити робити через axios, організація коду через сервіси*/}
+    <Users getPostById={getPostById}/>
+    <Posts posts={posts}/>
+
 
     </div>
   );

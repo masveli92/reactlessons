@@ -1,12 +1,9 @@
-function User ({user, lift}) {
-
+function User ({user, getPostById}) {
     return(
         <div className='userField'>
             <h3 className='userData'> {user.id} - {user.name}  </h3>
-            <button className= "infoButton" onClick={()=>{
-                lift(user);
-            }}> Info </button>
+            <button className= "postsButton" onClick={() => getPostById (user.id)}> User posts </button>
         </div>
     )
 }
-export default User;
+export {User};

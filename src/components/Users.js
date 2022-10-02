@@ -1,21 +1,13 @@
 import {useEffect, useState} from "react";
-import User from "./User";
 
-function Users(){
+import {getUsers} from "../services";
+import {User} from "./User";
+
+function Users({getPostById}){
     let [users, setUsers]=useState([]);
-    let [user, setUser]= useState(null);
-
-    const lift = (user)=>{
-        setUser(user);
-    }
 
     useEffect( ()=>{
-
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
-            .then(value => {
-                setUsers(value);
-            });
+        getUsers().then(value => { setUsers (value.data)});
 
         },[]
     )
@@ -23,22 +15,11 @@ function Users(){
        <div className='usersBox'>
            <div className='usersList'>
                <h2 className='userHeader'> User list: </h2>
-               {users.map(user=> (<User key={user.id} user ={user} lift = {lift} />))}
+               {users.map(user=> (<User key={user.id} user ={user} getPostById={getPostById}/>))}
            </div>
-
-           <div className='userBox'>
-               <h2 className='userInfoHeader'> Info about choozen user: </h2>
-                    <ul className='userList'>
-                        <li className='infoField'>{user?.name}</li>
-                        <li className='infoField'>{user?.username}</li>
-                        <li className='infoField'>{user?.email}</li>
-                        <li className='infoField'>{user?.phone}</li>
-                        <li className='infoField'>{user?.website}</li>
-                    </ul>
-           </div>
-      </div>
+       </div>
 
    )
 }
-export default Users
+export {Users}
 
